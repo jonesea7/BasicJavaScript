@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The DOM</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>The Document Object Model</h1>
+                <p>
+                    The DOM is a logical structure or an abstraction of of XML/HTML data.
+                </p>
+        </div>
+        <script>
+            function myFunction() {
+
+var num1 = 2;
+var num2 = 12;
+var equality = (num1 == '2');
+var strict = (num1 === '2');
+document.write('Equality: ' +equality+'<br>');
+document.write('Strict: ' +strict+'<br><br>');
+
+document.write('Data type: ' +typeof num1);
+document.write('<br> Data type; '+typeof '2');
+
+var test = isNaN(num2);
+console.log("isNaN(num2): "+test);
+var words = 'words';
+
+var array = [1,2,3,4,5] 
+document.write('<br> Data type: '+typeof array);
+
+var test2 = isNaN(words);
+console.log('isNaN(words): '+test2);
+var results = num1 + num2;
+document.write('<br>Data type: '+typeof results);
+
+console.log(num1+' + '+num2+' = '+results);
+
+
+
+};
+
+myFunction()
+        </script>
+    </body>
+</html>
