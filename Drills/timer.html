@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!--this prints the following statement to the user-->
+        <p>How many seconds would you like to set your alarm for?</p>
+
+        <!--creates a space for the user to input data we set the id tag so that we can call it later-->
+        <input type="" name="" id="seconds" value="">
+
+        <!--this is the button tag that give the user a button to click-->
+        <!-- onclick is method called on to do something when button in clicked-->
+        <!--we call the function title countdown() that will be executed upon click (yet to be defined)* (the asterisk means that I'm connecting this comment to a comment elsewhere-->
+        <button onclick="countdown()" >Click here</button>
+
+        <!--blank 'paragraph' used as a reference point for the identification of the timer-->
+        <p id="timer"></p>
+
+        <!--this is where we start using javascript as indcated by the script tag-->
+        <script>
+
+        //here we have to change the comment coding because we transitioned from html to javascript
+
+        //*here is the creation of the function countdown
+        function countdown() {
+            //we establish the variable as seconds which will be referenced quite a bit
+            //the var seconds is really getting the method document(which references the html doc) 
+            //getElementbyId method is calling for the input from the user we label as seconds in the id of the input tag above
+            //.value is ???
+            var seconds = document.getElementById('seconds').value;
+
+            //within the countdown () we are creating another function called tick()
+            function tick() {
+
+                //here we are redifining seconds as seconds minus one to create the count down (don't forget the semi-colon)
+                seconds = seconds - 1;
+
+                //now we call upon the timer id we established in the blank paragraph
+                //we connenct the blank paragraph to the method that will add content to the paragraph via innerHTML
+                //we set the paragraph contents to equal seconds so as the seconds countdown we see them dynamically in the paragraph
+                timer.innerHTML = seconds;
+
+                //methond setTimeout will determine how fast the function tick will actually tick
+                //in this case 1000 miliseconds is equal to one second
+                setTimeout(tick, 1000);
+
+                //when set up an if statement to end the loop of the countdown()
+                //if seconds is equal to -1 alert (or print for the user to see) "Time's up!"
+                if(seconds == -1) {
+                    alert("Time's up!");
+
+                //this closes the if statement    
+                }
+            //this closes the tick function    
+            }
+
+            //this calls the tick()
+            tick();
+        //this closes the countdown()    
+        }
+        //this ends the javascript
+        </script>
+    </body>
+</html>
